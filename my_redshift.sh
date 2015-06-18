@@ -34,7 +34,10 @@ my_temp = (temp + my_extra_temp).to_s
 p 'Weather api: ' + weather_url
 p 'Temperature: ' + my_temp + ' kelvin'
 
-redshift_cmd = "gtk-redshift -l " + lat + ":" + lng + " -t " + my_temp + ":" + my_temp + " -g 0.9 -o -m vidmode:screen=0"
+#redshift_cmd = "gtk-redshift -l " + lat + ":" + lng + " -t " + my_temp + ":" + my_temp + " -g 0.9 -o -m vidmode:screen=0"
+
+# Better setup?
+redshift_cmd = "gtk-redshift -l " + lat + ":" + lng + " -t " + my_temp + ":" + my_temp + " &"
 
 # This is used to test
 #redshift_cmd = "gtk-redshift -l -37.9:144.7 -t 5700:5300 -g 1 -o -m vidmode:screen=0"
